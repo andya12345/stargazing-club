@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>星空社 · 上海市育才中学天文社团</title>
+<meta name="description" content="上海市育才中学星空社——一间教室、一台望远镜、一片夜空。折射式与反射式望远镜、手绘光路图、观测档案与社团活动。">
+<meta name="theme-color" content="#05060a">
+<meta property="og:title" content="星空社 · 上海市育才中学">
+<meta property="og:description" content="把目光，交给夜空。">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.rv,.hero__copy > *{opacity:1!important;transform:none!important}.hero__copy > *{transition:none!important}</style></noscript>
+<script>if(location.search.indexOf('static')>-1){document.documentElement.className+=' is-static'}</script>
+</head>
+<body class="is-loading">
+
+<!-- ============ 顶部进度 / 导航 ============ -->
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="回到顶部">
+    <span class="nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.1"/><path d="M12 1.6v3.2M12 19.2v3.2M1.6 12h3.2M19.2 12h3.2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><path d="M12 0.4 13 11l10.6 1-10.6 1L12 23.6 11 13 0.4 12 11 11Z" fill="currentColor" opacity=".22"/></svg>
+    </span>
+    <span class="nav__txt"><b>星空社</b><i>STARGAZERS</i></span>
+  </a>
+
+  <nav class="nav__links" aria-label="页面导航">
+    <a href="#about">关于</a>
+    <a href="#optics">光路</a>
+    <a href="#archive">观测</a>
+  </nav>
+
+  <a class="btn btn--ghost nav__cta" href="#join">加入我们 <span aria-hidden="true">↗</span></a>
+
+  <button class="nav__burger" aria-label="打开菜单" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ HERO -->
+<section class="hero" id="hero">
+  <canvas class="hero__canvas" id="cosmos" aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">上海市育才中学 · 天文社团</p>
+      <h1 class="hero__title">星空社</h1>
+      <p class="hero__en">STARGAZERS</p>
+      <p class="hero__lead">把目光，交给夜空。<br>一间教室，一台望远镜，和一点点耐心。</p>
+      <dl class="hero__meta">
+        <div><dt>观测</dt><dd>每周三 社团课 · 部分晚自习<br>教学楼 / 校园操场</dd></div>
+        <div><dt>位置</dt><dd>嘉定 · 31.38° N　121.25° E</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <p class="hero__caption" aria-hidden="true"><span id="astroTime">太阳系 · 今日方位</span></p>
+
+  <div class="hero__foot">
+    <span class="hero__scroll"><i aria-hidden="true"></i>向下滚动</span>
+  </div>
+</section>
+
+<!-- ============================================================ 01 关于 -->
+<section class="about" id="about">
+  <div class="wrap about__grid">
+    <aside class="side">
+      <p class="eyebrow">关于</p>
+      <h2 class="h2 side__title">抬头<br>看一会儿</h2>
+      <p class="side__note">上海市育才中学 · 静安</p>
+    </aside>
+
+    <div class="about__body">
+      <p class="about__lead rv">
+        星空社是育才的天文爱好者社团。<br>
+        我们研究光怎么走，也研究光从哪里来。
+      </p>
+
+      <div class="about__cols">
+        <p class="rv">我们把每周的傍晚留给星空：有人拆解望远镜的光路，有人练习对焦、追星、导星，有人守着一台相机等一个小时的曝光，也有人只是躺在操场上，认出夏季大三角。</p>
+        <p class="rv">我们不需要你会用赤道仪，也不需要你背下梅西耶星表。只需要你愿意在一个晴朗的晚上，抬头看一会儿。</p>
+      </div>
+
+      <ul class="about__facts">
+        <li class="rv"><b>观测</b><span>校园操场 / 教学楼楼顶，社团课与晚自习后</span></li>
+        <li class="rv"><b>拍摄</b><span>月面、太阳黑子、行星与深空目标</span></li>
+        <li class="rv"><b>研习</b><span>光学原理、星图使用、天文竞赛与课题</span></li>
+        <li class="rv"><b>展示</b><span>社团展示、游园会与义卖</span></li>
+      </ul>
+
+      <blockquote class="about__quote rv">
+        <p>“我们看到的，是它几百年前的样子。”</p>
+        <cite>—— 社团简介课上的第一句话</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 跑马灯 -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>M42 猎户座大星云</span><i>·</i><span>M31 仙女座星系</span><i>·</i><span>土星环</span><i>·</i><span>第谷环形山</span><i>·</i><span>太阳黑子</span><i>·</i><span>英仙座流星雨</span><i>·</i><span>木星大红斑</span><i>·</i><span>夏季大三角</span><i>·</i>
+    <span>M42 猎户座大星云</span><i>·</i><span>M31 仙女座星系</span><i>·</i><span>土星环</span><i>·</i><span>第谷环形山</span><i>·</i><span>太阳黑子</span><i>·</i><span>英仙座流星雨</span><i>·</i><span>木星大红斑</span><i>·</i><span>夏季大三角</span><i>·</i>
+  </div>
+</div>
+
+<!-- ============================================================ 02 光路 -->
+<section class="optics" id="optics">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow rv">光路</p>
+      <h2 class="h2 rv">把宇宙，<em>收进一枚镜片</em></h2>
+      <p class="lead rv">望远镜并不“放大”物体。它只是收集更多的光，再把光汇聚到一点。<br>理解这句话，就理解了下面三种结构。</p>
+    </header>
+
+    <div class="scope">
+      <div class="scope__stage rv">
+        <div class="scope__frame">
+          <span class="tick tick--tl"></span><span class="tick tick--tr"></span>
+          <span class="tick tick--bl"></span><span class="tick tick--br"></span>
+
+          <!-- ---------- A 折射式 ---------- -->
+          <figure class="scope__svg is-active" data-scope="refractor">
+            <svg viewBox="0 0 960 480" role="img" aria-label="折射式望远镜光路图：平行光经物镜汇聚于焦点，再由目镜平行射出">
+              <defs>
+                <linearGradient id="rayG" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#cdc2ae" stop-opacity=".38"/>
+                  <stop offset=".55" stop-color="#e6dcc9" stop-opacity="1"/>
+                  <stop offset="1" stop-color="#f2e6cf" stop-opacity="1"/>
+                </linearGradient>
+                <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="4.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <g class="d-structure" fill="none" stroke="currentColor" stroke-width="1.2">
+                <!-- 镜筒 -->
+                <path d="M215 178 H650 M215 342 H650"/>
+                <path d="M650 178 V218 M650 302 V342"/>
+                <!-- 遮光罩 -->
+                <path d="M150 190 L215 178 M150 330 L215 342"/>
+                <!-- 物镜座 -->
+                <rect x="203" y="172" width="14" height="176" rx="2"/>
+                <!-- 调焦座 -->
+                <path d="M650 218 h74 M650 302 h74 M724 218 v84"/>
+                <!-- 目镜 -->
+                <rect x="726" y="206" width="46" height="108" rx="3"/>
+                <path d="M734 206 v108 M764 206 v108"/>
+              </g>
+
+              <!-- 物镜（双分离） -->
+              <g class="d-glass" fill="none" stroke-width="1.5">
+                <path d="M212 180 Q236 260 212 340" stroke="#ddd2bf"/>
+                <path d="M205 180 Q229 260 205 340" stroke="#ddd2bf" opacity=".55"/>
+              </g>
+              <!-- 目镜镜片 -->
+              <g class="d-glass" fill="none" stroke="#f2e6cf" stroke-width="1.4" opacity=".9">
+                <path d="M730 214 Q744 260 730 306"/>
+                <path d="M762 214 Q748 260 762 306"/>
+              </g>
+
+              <!-- 入射平行光 -->
+              <g class="d-ray" stroke="url(#rayG)" stroke-width="1.3" fill="none" filter="url(#glow)">
+                <path class="flow" d="M40 200 H212"/><path class="flow" d="M40 230 H212"/>
+                <path class="flow" d="M40 260 H212"/><path class="flow" d="M40 290 H212"/>
+                <path class="flow" d="M40 320 H212"/>
+              </g>
+              <!-- 汇聚 -->
+              <g class="d-ray" stroke="url(#rayG)" stroke-width="1.3" fill="none" filter="url(#glow)">
+                <path class="flow" d="M212 200 L600 260"/><path class="flow" d="M212 230 L600 260"/>
+                <path class="flow" d="M212 260 L600 260"/><path class="flow" d="M212 290 L600 260"/>
+                <path class="flow" d="M212 320 L600 260"/>
+              </g>
+              <!-- 焦点后发散到目镜 -->
+              <g class="d-ray" stroke="url(#rayG)" stroke-width="1.2" fill="none" opacity=".8">
+                <path class="flow" d="M600 260 L730 218"/><path class="flow" d="M600 260 L730 302"/>
+                <path class="flow" d="M600 260 L730 260"/>
+              </g>
+              <!-- 出射平行光 -->
+              <g class="d-ray" stroke="#f2e6cf" stroke-width="1.1" fill="none" opacity=".75">
+                <path class="flow" d="M766 218 H860"/><path class="flow" d="M766 260 H860"/><path class="flow" d="M766 302 H860"/>
+              </g>
+
+              <!-- 焦点 -->
+              <circle class="focus" cx="600" cy="260" r="3.6" fill="#fffaf0"/>
+              <circle cx="600" cy="260" r="10" fill="none" stroke="#f2e6cf" stroke-opacity=".45"/>
+
+              <!-- 焦距标注 -->
+              <g class="d-dim" stroke="currentColor" stroke-width=".8" stroke-opacity=".45">
+                <path d="M212 392 V404 M600 392 V404 M212 398 H600"/>
+                <path d="M212 398 l7 -3.4 v6.8Z" fill="currentColor" stroke="none" opacity=".6"/>
+                <path d="M600 398 l-7 -3.4 v6.8Z" fill="currentColor" stroke="none" opacity=".6"/>
+              </g>
+              <text class="d-label" x="406" y="392" text-anchor="middle">焦距 f</text>
+
+              <!-- 标注 -->
+              <g class="d-note">
+                <path d="M212 172 V120 H330" class="d-lead"/>
+                <text x="336" y="124">物镜 · 双分离消色差</text>
+                <path d="M600 250 L600 150 H700" class="d-lead"/>
+                <text x="706" y="154">焦平面</text>
+                <path d="M748 206 V150 H836" class="d-lead"/>
+                <text x="842" y="154" text-anchor="end" dx="0">目镜</text>
+                <path d="M70 200 V166" class="d-lead"/>
+                <text x="70" y="158" text-anchor="middle">平行光</text>
+              </g>
+            </svg>
+            <figcaption>图 02-A　折射式（开普勒式）· 物镜成像，目镜放大</figcaption>
+          </figure>
+
+          <!-- ---------- B 反射式 ---------- -->
+          <figure class="scope__svg" data-scope="reflector">
+            <svg viewBox="0 0 960 480" role="img" aria-label="牛顿式反射望远镜光路图：平行光经抛物面主镜反射，由45度副镜折出镜筒">
+              <defs>
+                <linearGradient id="rayG2" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#cdc2ae" stop-opacity=".38"/>
+                  <stop offset=".6" stop-color="#e6dcc9" stop-opacity="1"/>
+                  <stop offset="1" stop-color="#f2e6cf" stop-opacity="1"/>
+                </linearGradient>
+                <filter id="glow2" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="4.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <g class="d-structure" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M250 196 H790 M250 384 H790"/>
+                <path d="M250 196 V384" stroke-dasharray="3 5" stroke-opacity=".35"/>
+                <!-- 镜筒右端 -->
+                <path d="M790 196 V240 M790 340 V384"/>
+                <!-- 调焦座（上方） -->
+                <path d="M410 196 V96 M452 196 V96 M410 96 H452"/>
+                <rect x="406" y="60" width="50" height="38" rx="3"/>
+              </g>
+
+              <!-- 主镜：抛物面 -->
+              <g class="d-glass" fill="none" stroke="#ddd2bf" stroke-width="1.8">
+                <path d="M748 196 Q790 290 748 384"/>
+                <path d="M756 200 Q796 290 756 380" opacity=".35"/>
+              </g>
+              <!-- 副镜：45°平面 -->
+              <g class="d-glass" fill="none" stroke="#f2e6cf" stroke-width="1.6">
+                <ellipse cx="430" cy="290" rx="9" ry="34" transform="rotate(-45 430 290)"/>
+              </g>
+              <!-- 蜘蛛支架 -->
+              <g stroke="currentColor" stroke-width=".7" stroke-opacity=".4">
+                <path d="M430 256 L330 196 M430 324 L530 384"/>
+              </g>
+
+              <!-- 入射 -->
+              <g class="d-ray" stroke="url(#rayG2)" stroke-width="1.3" fill="none" filter="url(#glow2)">
+                <path class="flow" d="M60 240 H745"/><path class="flow" d="M60 290 H760"/>
+                <path class="flow" d="M60 340 H745"/>
+              </g>
+              <!-- 主镜反射 -->
+              <g class="d-ray" stroke="url(#rayG2)" stroke-width="1.3" fill="none" filter="url(#glow2)">
+                <path class="flow" d="M745 240 L430 290"/><path class="flow" d="M760 290 L430 290"/>
+                <path class="flow" d="M745 340 L430 290"/>
+              </g>
+              <!-- 副镜折出 -->
+              <g class="d-ray" stroke="#f2e6cf" stroke-width="1.2" fill="none">
+                <path class="flow" d="M430 290 L430 118"/><path class="flow" d="M420 284 L430 118"/><path class="flow" d="M440 296 L430 118"/>
+              </g>
+
+              <circle class="focus" cx="430" cy="118" r="3.4" fill="#fffaf0"/>
+              <circle cx="430" cy="118" r="9" fill="none" stroke="#f2e6cf" stroke-opacity=".45"/>
+
+              <g class="d-note">
+                <path d="M770 250 L860 250 L860 190" class="d-lead"/>
+                <text x="856" y="182" text-anchor="end">主镜 · 抛物面</text>
+                <path d="M430 330 L330 400 H230" class="d-lead"/>
+                <text x="224" y="404" text-anchor="end">副镜 · 45° 平面</text>
+                <path d="M452 60 V40 H560" class="d-lead"/>
+                <text x="566" y="44">目镜 / 焦平面</text>
+                <path d="M250 384 V430 H180" class="d-lead"/>
+                <text x="174" y="434" text-anchor="end">镜筒</text>
+                <path d="M100 240 V200" class="d-lead"/>
+                <text x="100" y="192" text-anchor="middle">平行光</text>
+              </g>
+            </svg>
+            <figcaption>图 02-B　牛顿式反射 · 主镜收集，副镜把光折出镜筒</figcaption>
+          </figure>
+
+          <!-- ---------- C 折反式 ---------- -->
+          <figure class="scope__svg" data-scope="catadioptric">
+            <svg viewBox="0 0 960 480" role="img" aria-label="折反式望远镜光路图：校正镜、主镜、副镜使光路折叠，焦点位于镜筒后方">
+              <defs>
+                <linearGradient id="rayG3" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#cdc2ae" stop-opacity=".38"/>
+                  <stop offset=".6" stop-color="#e6dcc9" stop-opacity="1"/>
+                  <stop offset="1" stop-color="#f2e6cf" stop-opacity="1"/>
+                </linearGradient>
+                <filter id="glow3" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="4.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <g class="d-structure" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M230 186 H760 M230 334 H760"/>
+                <path d="M760 186 V228 M760 292 V334"/>
+                <path d="M230 186 V334" stroke-opacity=".5"/>
+                <path d="M690 292 h70 M690 228 h70"/>
+                <!-- 后方目镜 -->
+                <rect x="800" y="244" width="48" height="32" rx="3"/>
+                <path d="M848 244 v32"/>
+              </g>
+
+              <!-- 校正镜 -->
+              <g class="d-glass" fill="none" stroke="#ddd2bf" stroke-width="1.4">
+                <path d="M230 186 Q245 260 230 334"/>
+                <path d="M222 186 Q237 260 222 334" opacity=".4"/>
+              </g>
+              <!-- 主镜（带中心孔） -->
+              <g class="d-glass" fill="none" stroke="#ddd2bf" stroke-width="1.8">
+                <path d="M742 186 Q776 226 742 246"/>
+                <path d="M742 274 Q776 294 742 334"/>
+                <path d="M750 190 Q784 226 750 246" opacity=".3"/>
+                <path d="M750 274 Q784 294 750 330" opacity=".3"/>
+              </g>
+              <!-- 副镜（凸面） -->
+              <g class="d-glass" fill="none" stroke="#f2e6cf" stroke-width="1.6">
+                <path d="M442 222 Q424 260 442 298"/>
+                <path d="M436 226 Q418 260 436 294" opacity=".4"/>
+              </g>
+              <!-- 副镜支架 -->
+              <g stroke="currentColor" stroke-width=".7" stroke-opacity=".35">
+                <path d="M430 260 L230 200 M430 260 L230 320"/>
+              </g>
+
+              <g class="d-ray" stroke="url(#rayG3)" stroke-width="1.3" fill="none" filter="url(#glow3)">
+                <path class="flow" d="M50 200 H220"/><path class="flow" d="M50 232 H220"/>
+                <path class="flow" d="M50 288 H220"/><path class="flow" d="M50 320 H220"/>
+              </g>
+              <g class="d-ray" stroke="url(#rayG3)" stroke-width="1.3" fill="none" filter="url(#glow3)">
+                <path class="flow" d="M226 200 L740 200"/><path class="flow" d="M226 232 L746 232"/>
+                <path class="flow" d="M226 288 L746 288"/><path class="flow" d="M226 320 L740 320"/>
+              </g>
+              <g class="d-ray" stroke="url(#rayG3)" stroke-width="1.2" fill="none" filter="url(#glow3)">
+                <path class="flow" d="M740 200 L434 246"/><path class="flow" d="M746 232 L436 252"/>
+                <path class="flow" d="M746 288 L436 268"/><path class="flow" d="M740 320 L434 274"/>
+              </g>
+              <g class="d-ray" stroke="#f2e6cf" stroke-width="1.2" fill="none">
+                <path class="flow" d="M440 244 L868 258"/><path class="flow" d="M438 252 L870 260"/>
+                <path class="flow" d="M438 268 L870 260"/><path class="flow" d="M440 276 L868 262"/>
+              </g>
+
+              <circle class="focus" cx="869" cy="260" r="3.6" fill="#fffaf0"/>
+              <circle cx="869" cy="260" r="10" fill="none" stroke="#f2e6cf" stroke-opacity=".45"/>
+
+              <g class="d-note">
+                <path d="M230 168 V120 H320" class="d-lead"/>
+                <text x="326" y="124">校正镜 · 弯月透镜</text>
+                <path d="M760 340 L820 400 H700" class="d-lead"/>
+                <text x="694" y="404" text-anchor="end">主镜 · 带中心孔</text>
+                <path d="M430 216 L430 150 H520" class="d-lead"/>
+                <text x="526" y="154">副镜 · 凸面</text>
+                <path d="M869 270 V330 H920" class="d-lead"/>
+                <text x="916" y="334" text-anchor="end">焦平面</text>
+                <path d="M90 200 V160" class="d-lead"/>
+                <text x="90" y="152" text-anchor="middle">平行光</text>
+              </g>
+            </svg>
+            <figcaption>图 02-C　折反式（马克苏托夫 / 施密特-卡塞格林）· 折叠光路，短镜筒长焦距</figcaption>
+          </figure>
+
+          <div class="scope__badge"><span>图 02</span><b id="scopeBadge">A · 折射式</b></div>
+        </div>
+      </div>
+
+      <div class="scope__side">
+        <div class="scope__tabs" role="tablist" aria-label="望远镜结构">
+          <button class="tab is-active" role="tab" aria-selected="true" data-scope-btn="refractor">
+            <span class="tab__idx">A</span>
+            <span class="tab__name">折射式<i>REFRACTOR</i></span>
+            <span class="tab__dot"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-scope-btn="reflector">
+            <span class="tab__idx">B</span>
+            <span class="tab__name">反射式<i>REFLECTOR</i></span>
+            <span class="tab__dot"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-scope-btn="catadioptric">
+            <span class="tab__idx">C</span>
+            <span class="tab__name">折反式<i>CATADIOPTRIC</i></span>
+            <span class="tab__dot"></span>
+          </button>
+        </div>
+
+        <div class="scope__panels">
+          <div class="panel is-active" data-scope-panel="refractor">
+            <p class="panel__title">用一块凸透镜，把光折弯。</p>
+            <p class="panel__text">光线穿过物镜时发生折射，平行光被汇聚到焦点；焦距之外再放一枚目镜，把像放大成你能看见的样子。成像正立，对比度高，是入门与月球、行星观测的经典结构。</p>
+            <ul class="panel__list">
+              <li><span>光路</span>平行光 → 折射 → 焦点 → 目镜</li>
+              <li><span>优点</span>免维护、锐利、开机即用</li>
+              <li><span>代价</span>口径做大很贵，有色差</li>
+            </ul>
+          </div>
+          <div class="panel" data-scope-panel="reflector">
+            <p class="panel__title">用一面镜子，把光折回来。</p>
+            <p class="panel__text">抛物面主镜把光反射汇聚，45° 副镜在光路中途把它折出镜筒，焦点落在侧面。没有色差，同样价格能买到更大的口径——这是深空摄影最常见的选择。</p>
+            <ul class="panel__list">
+              <li><span>光路</span>平行光 → 主镜 → 副镜 45° → 目镜</li>
+              <li><span>优点</span>大口径便宜，无色差</li>
+              <li><span>代价</span>需校准光轴，成像倒立</li>
+            </ul>
+          </div>
+          <div class="panel" data-scope-panel="catadioptric">
+            <p class="panel__title">把光路折叠起来，装进一只旅行箱。</p>
+            <p class="panel__text">前端一枚校正镜，后端一面带中心孔的主镜，光线在镜筒里往返两次，焦平面从主镜中央的孔穿出。两米焦距，镜筒只有半米——便携与长焦的折中方案。</p>
+            <ul class="panel__list">
+              <li><span>光路</span>校正镜 → 主镜 → 副镜 → 穿孔出射</li>
+              <li><span>优点</span>短小、长焦、封闭不易积灰</li>
+              <li><span>代价</span>中心遮挡，反差略低</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 对比表 -->
+    <div class="cmp rv" role="region" aria-label="三种结构对比">
+      <div class="cmp__row cmp__row--head">
+        <span>结构</span><span>主光学元件</span><span>优势</span><span>适合</span>
+      </div>
+      <div class="cmp__row"><span data-l="结构"><b>A</b> 折射式</span><span data-l="主光学元件">物镜（透镜组）</span><span data-l="优势">锐利、免调校</span><span data-l="适合">月面 · 行星 · 入门</span></div>
+      <div class="cmp__row"><span data-l="结构"><b>B</b> 反射式</span><span data-l="主光学元件">抛物面主镜</span><span data-l="优势">大口径、无色差</span><span data-l="适合">深空 · 星云 · 摄影</span></div>
+      <div class="cmp__row"><span data-l="结构"><b>C</b> 折反式</span><span data-l="主光学元件">校正镜 + 主镜</span><span data-l="优势">短镜筒、长焦距</span><span data-l="适合">行星摄影 · 外出携带</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 今夜 -->
+<section class="tonight" aria-label="今夜星空">
+  <div class="wrap tonight__inner">
+    <div class="tonight__cell rv">
+      <p class="eyebrow">今夜</p>
+      <p class="tonight__date" id="todayDate">—</p>
+    </div>
+    <div class="tonight__cell rv">
+      <p class="micro">月相</p>
+      <p class="tonight__moon"><canvas id="moonCanvas" width="88" height="88" aria-label="当前月相"></canvas><span id="moonPhase">—</span></p>
+    </div>
+    <div class="tonight__cell rv">
+      <p class="micro">观测条件</p>
+      <p class="tonight__big" id="seeing">—</p>
+      <p class="tonight__note">上海市区光害较重，建议前往郊区或选择晴朗无月的夜晚</p>
+    </div>
+    <div class="tonight__cell rv">
+      <p class="micro">本地时间</p>
+      <p class="tonight__big" id="clock">--:--</p>
+      <p class="tonight__note">UTC+8 · 31.38°N 121.25°E</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 03 观测摄影 -->
+<section class="archive" id="archive">
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow rv">观测档案</p>
+        <h2 class="h2 rv">底片，<em>还在冲洗</em></h2>
+      </div>
+      <p class="lead lead--sm rv">月面、太阳黑子、校园夜空，还有义卖摊位。<br>照片会陆续补充到这里。</p>
+    </header>
+
+    <div class="shots">
+      <figure class="shot shot--astro shot--tall rv" data-shot data-fit="contain">
+        <div class="shot__frame">
+          <img src="assets/img/moon.jpg" alt="月面" loading="lazy" onload="this.parentNode.classList.add('has-img')">
+          <div class="shot__ph">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="13"/><circle cx="19" cy="20" r="3"/><circle cx="29" cy="27" r="2"/><circle cx="17" cy="30" r="1.6"/></svg>
+            <span>MOON</span><b>月面</b><i>待补充</i>
+          </div>
+        </div>
+        <figcaption><b>月面 · 2026 元旦</b><span>手机接天文望远镜拍摄</span></figcaption>
+      </figure>
+
+      <figure class="shot shot--astro shot--wide rv" data-shot data-fit="contain">
+        <div class="shot__frame">
+          <img src="assets/img/sun.jpg" alt="太阳黑子" loading="lazy" onload="this.parentNode.classList.add('has-img')">
+          <div class="shot__ph">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="13"/><circle cx="24" cy="24" r="19" stroke-dasharray="2 4" opacity=".5"/><circle cx="21" cy="21" r="2.6"/><circle cx="28" cy="26" r="1.8"/></svg>
+            <span>SUN</span><b>太阳黑子</b><i>待补充</i>
+          </div>
+        </div>
+        <figcaption><b>太阳黑子 · 2025 校运动会</b><span>松下 S5M2 + 70-300mm · 巴德膜</span></figcaption>
+      </figure>
+
+      <figure class="shot rv" data-shot>
+        <div class="shot__frame">
+          <img src="assets/img/site.jpg" alt="观测现场" loading="lazy" onload="this.parentNode.classList.add('has-img')">
+          <div class="shot__ph">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 40h32"/><path d="M14 40 24 12l10 28"/><circle cx="34" cy="16" r="2.4"/></svg>
+            <span>SITE</span><b>观测现场</b><i>待补充</i>
+          </div>
+        </div>
+        <figcaption><b>教学楼与蛾眉月</b><span>校园夜空 · 月亮旁边那颗亮星</span></figcaption>
+      </figure>
+
+      <figure class="shot shot--wide rv" data-shot>
+        <div class="shot__frame">
+          <img src="assets/img/fair.jpg" alt="社团义卖" loading="lazy" onload="this.parentNode.classList.add('has-img')">
+          <div class="shot__ph">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="9"/><ellipse cx="24" cy="24" rx="19" ry="5" transform="rotate(-18 24 24)"/></svg>
+            <span>FAIR</span><b>义卖现场</b><i>待补充</i>
+          </div>
+        </div>
+        <figcaption><b>社团义卖 · 游园会</b><span>望远镜目视体验</span></figcaption>
+      </figure>
+    </div>
+
+    <p class="archive__note rv">
+      <span>编者注</span>
+      照片都拍自社团活动：运动会、元旦和义卖现场。
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ 04 海报 -->
+<section class="posters" id="posters">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow rv">海报</p>
+      <h2 class="h2 rv">一张纸，<em>把人叫到操场</em></h2>
+      <p class="lead rv">招新、社团展示与游园会的海报。纵向的框已经在等他们。</p>
+    </header>
+
+    <div class="poster-wall">
+      <figure class="poster rv">
+        <div class="poster__frame"><span>招新</span><b>POSTER</b><i>待补充</i></div>
+        <figcaption>2026 秋季招新</figcaption>
+      </figure>
+      <figure class="poster rv">
+        <div class="poster__frame has-img">
+          <img src="assets/img/poster-fair.jpg" alt="星空社义卖海报">
+          <span>游园会</span><b>POSTER</b><i>待补充</i>
+        </div>
+        <figcaption>义卖海报 · 操场义卖</figcaption>
+      </figure>
+      <figure class="poster rv">
+        <div class="poster__frame"><span>观测</span><b>POSTER</b><i>待补充</i></div>
+        <figcaption>流星雨观测预告</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 06 加入 -->
+<section class="join" id="join">
+  <div class="wrap join__grid">
+    <div class="join__body">
+      <p class="eyebrow rv">加入我们</p>
+      <h2 class="h2 join__title rv">今晚<br><em>有星星</em></h2>
+      <p class="lead rv">如果你也想把看到的记下来，欢迎来操场找我们。<br>不需要基础，不需要设备，带一件外套就好。</p>
+
+      <div class="join__cta rv">
+        <a class="btn btn--solid" href="mailto:zyq@zengyiquan.top">报名加入 <span aria-hidden="true">↗</span></a>
+        <a class="btn btn--ghost" href="#archive">看看观测档案</a>
+      </div>
+
+      <dl class="join__info rv">
+        <div><dt>活动时间</dt><dd>每周三 社团课 · 部分晚自习</dd></div>
+        <div><dt>活动地点</dt><dd>教学楼 / 校园操场</dd></div>
+        <div><dt>指导老师</dt><dd>丁玲</dd></div>
+        <div><dt>联系邮箱</dt><dd>zyq@zengyiquan.top</dd></div>
+      </dl>
+
+      <figure class="cert rv">
+        <img src="assets/img/cert.jpg" alt="指导老师丁玲的上海市天文学会培训证书" loading="lazy">
+        <figcaption>丁玲 · 上海市天文学会培训证书</figcaption>
+      </figure>
+    </div>
+
+    <aside class="rules rv">
+      <p class="rules__t">观测守则</p>
+      <ol class="rules__list">
+        <li><span>一</span>出门前查天气与月相，云量超过三成就不硬撑。</li>
+        <li><span>二</span>先对光轴，再找目标；找不到就先翻星图。</li>
+        <li><span>三</span>关掉手电。给眼睛十五分钟适应黑暗。</li>
+        <li><span>四</span>最后走的人，把镜盖盖好。</li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <span class="nav__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.1"/><path d="M12 1.6v3.2M12 19.2v3.2M1.6 12h3.2M19.2 12h3.2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><path d="M12 0.4 13 11l10.6 1-10.6 1L12 23.6 11 13 0.4 12 11 11Z" fill="currentColor" opacity=".22"/></svg>
+      </span>
+      <p><b>上海市育才中学 · 星空社</b><span>Shanghai Yucai High School · Stargazers</span></p>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="#about">关于</a><a href="#optics">光路</a><a href="#archive">观测</a><a href="#posters">海报</a><a href="#join">加入</a>
+    </nav>
+    <p class="foot__meta">© <span id="year">2026</span> 星空社　·　图片与文字版权归社团所有</p>
+  </div>
+</footer>
+
+</div>
+
+<!-- ============ 图片灯箱 ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="查看图片">
+  <button class="lightbox__close" aria-label="关闭" data-close><span></span><span></span></button>
+  <img id="lightboxImg" src="" alt="">
+  <p class="lightbox__cap" id="lightboxCap"></p>
+</div>
+
+<script src="assets/js/cosmos.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
